@@ -1,0 +1,144 @@
+body {
+  background-color: black;
+}
+
+.botones {
+  position: absolute;
+  top:5%;
+  left:34%;
+}
+
+
+#bgFondo {
+  position: absolute;
+  z-index: 0;
+  height: 85%;
+  width: 60%;
+  border-style: solid;
+  border-color: #FF8000;
+  padding: 6px;
+  left: 20%;
+  top: 5%;
+
+}
+
+.cuerdas {
+    position:absolute;
+    height: 80%;
+    top:3%;
+}
+
+#cuerdaIzquierda {
+  left:38%;
+}
+
+#cuerdaDerecha{
+  left: 60.8%;
+}
+
+.botones {
+    position:absolute;
+    width: 30.5%;
+    height: 15%;
+    left: 34.7%;
+}
+
+#btnManejo {
+  top:15%;
+}
+
+#btnActividades {
+  top:35%;
+}
+
+#btnImprimibles {
+  top:55%;
+}
+
+#objLetrero {
+  position:absolute;
+  width: 25%;
+  height: 50%;
+  left: 25%;
+  bottom: 8%
+}
+
+.caraPequena {
+  position: absolute;
+  z-index: 2;
+  width: 6%;
+  height: 12%;
+}
+
+.caraGrande {
+  position: absolute;
+  z-index: 2;
+  width: 9%;
+  height: 18%;
+}
+
+#sprLlorando {  top:45%;  left: 55%; }
+#sprFeliz { top:35%;  left: 61%;}
+#sprEnojado { top:60%;  left: 58%;}
+#sprEnfermo { top:70%;  left: 68%;}
+#sprRisa {top:50%;  left: 68%;}
+#sprSentimental { top:35%;  left: 72%;}
+
+
+#fondoPares {
+  /*background-color: red;*/
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  left: 26.5%;
+  width: 50%;
+  height: 50%;
+}
+
+.texto {
+    position: absolute;
+}
+
+#menuActividades {
+  /*background-color: green;*/
+  color: red;
+  top: 20%;
+  left: 40%;
+  font-size: 80%;
+  font-family: 'Muli', sans-serif;
+  text-align:left;
+
+}
+
+a {
+  font-family: 'Muli', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  color: red;
+  font-size: 150%;
+  text-decoration: none;
+
+}
+.preguntas {
+  position: absolute;
+  z-index: 2;
+  top: 10%;
+  left: 26.5%;
+  width: 50%;
+  height: 50%;
+  /*background-color: red;*/
+}
+
+.imagesEmociones {
+position: absolute;
+height: 60px;
+width: 60px;
+border-radius: 100%;
+border: solid rgb(251, 45, 142) 2px;
+padding: 4px;
+left: 75%;
+}
+
+#imgEmociones01 {top: 3%;}
+#imgEmociones02 {top: 40%;}
+#imgEmociones03 {top: 80%;}

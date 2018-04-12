@@ -1,0 +1,27 @@
+[
+  {
+    "ident":"cuerdaIzquierda",
+    "clase":"cuerdas",
+    "imagen":"./img/objetos/cuerda.png"
+  },
+  {
+    "ident":"cuerdaDerecha",
+    "clase":"cuerdas",
+    "imagen":"./img/objetos/cuerda.png"
+  },
+  {
+    "ident":"btnManejo",
+    "clase":"botones",
+    "imagen":"./img/botones/manejo_emociones0001.png"
+  }
+  {
+    "ident":"btnActividades",
+    "clase":"botones",
+    "imagen":"./img/botones/actividades0001.png"
+  }
+  {
+    "ident":"btnImprimibles",
+    "clase":"botones",
+    "imagen":"./img/botones/imprimir0001.png"
+  }
+]
