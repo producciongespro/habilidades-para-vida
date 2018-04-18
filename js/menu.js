@@ -20,6 +20,17 @@ $( document ).ready(function() {
     //       });
     // });
 });
+function menu() {
+    // $.getJSON("./data/data_carga_menu.json", function(datos) {
+    //   dataEsp = datos;
+    // });
+    // console.log(dataEsp.imagen[0]);
+    $.getJSON("./data/data_carga_menu.json", function(result){
+        $.each(result, function(i, field){
+            $("#contenedor").append(field + " ");
+        });
+    });
+};
 
 function bottom_anim (obj,ind) {
   var nObj = obj.id;
@@ -38,13 +49,13 @@ function bottom_anim (obj,ind) {
   }
 }
 
-function menu() {
-  console.log("Entré");
-  var imagen = new Image();
-   var src = './img/objetos/cuerda.png';
-   imagen.src = src;
-   $(imagen).attr("id","cuerdaIzquierda");
-   $(imagen).attr("class","cuerdas");
-   $('#contenedor').append(imagen);
-// <img  id="cuerdaIzquierda" class="cuerdas" src="./img/objetos/cuerda.png" alt="" /> -->
-}
+// function menu() {
+//   console.log("Entré");
+//   var imagen = new Image();
+//    var src = './img/objetos/cuerda.png';
+//    imagen.src = src;
+//    $(imagen).attr("id","cuerdaIzquierda");
+//    $(imagen).attr("class","cuerdas");
+//    $('#contenedor').append(imagen);
+// // <img  id="cuerdaIzquierda" class="cuerdas" src="./img/objetos/cuerda.png" alt="" /> -->
+// }
