@@ -1,27 +1,32 @@
 [
   {
-    "ident":"cuerdaIzquierda",
+    "id":"cuerdaIzquierda",
     "clase":"cuerdas",
-    "imagen":"./img/objetos/cuerda.png"
+    "imagen":"./img/objetos/cuerda.png",
+    "id_link":""
   },
   {
-    "ident":"cuerdaDerecha",
+    "id":"cuerdaDerecha",
     "clase":"cuerdas",
-    "imagen":"./img/objetos/cuerda.png"
+    "imagen":"./img/objetos/cuerda.png",
+    "id_link":""
   },
   {
-    "ident":"btnManejo",
+    "id":"btnManejo",
     "clase":"botones",
-    "imagen":"./img/botones/manejo_emociones0001.png"
-  }
+    "imagen":"./img/botones/manejo_emociones0001.png",
+    "id_link":"linkMan"
+  },
   {
-    "ident":"btnActividades",
+    "id":"btnActividades",
     "clase":"botones",
-    "imagen":"./img/botones/actividades0001.png"
-  }
+    "imagen":"./img/botones/actividades0001.png",
+    "id_link":"linkAct"
+  },
   {
-    "ident":"btnImprimibles",
+    "id":"btnImprimibles",
     "clase":"botones",
-    "imagen":"./img/botones/imprimir0001.png"
+    "imagen":"./img/botones/imprimir0001.png",
+    "id_link":"linkImp"
   }
 ]
