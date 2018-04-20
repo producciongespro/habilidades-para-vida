@@ -1,60 +1,50 @@
 var imagen = new Image();
 $( document ).ready(function() {
-   menuCall();
+   menu();
 })
 
-function menuCall() {
-  menu();
- //  $("#btnImprimibles").hover( function() {
- //     console.log("En evento de botones");
- //          bottom_anim(this,2);
- //      }, function() {
- //         bottom_anim(this,1);
- //       }
- // );
-}
+// function menuCall() {
+//   menu();
+// }
+
 function menu() {
     $.getJSON("data/data_carga_menu.json", function(result){
         for (var i = 0; i < result.length; i++) {
-            var imagen = new Image();
+            imagen = $('<img>');
             src = result[i].imagen;
-            imagen.src = src;
+            valor= "va";
+            claseObj = result[i].clase;
             $(imagen).attr("id",result[i].id);
-            $(imagen).attr("class",result[i].clase);
-                $('#contenedor').append(imagen);
-
-            // if (result[i].clase = "cuerdas") {
-            //     $('#contenedor').append(imagen);
-            // } else {
-              // $('#contenedor').append("<a href=''></a>");
-              console.log(result[i].id_link);
-              // switch (result[i].id) {
-              //   case "btnImprimibles":
-              //       $('a').attr('href','http://smashingmagazine.com');
-              //       $('a').attr('id',result[i].id_link);
-              //       $('a').append(imagen);
-              //   break;
-              //   case "btnActividades":
-              //       $('a').attr('href','http://smashingmagazine.com');
-              //       $('a').attr('id',result[i].id_link);
-              //       $('a').append(imagen);
-              //   break;
-              //   case "btnManejo":
-              //       $('a').attr('href','http://smashingmagazine.com');
-              //       $('a').attr('id',result[i].id_link);
-              //       $('a').append(imagen);
-              //   break;
-              //   default:
-              // }
-            // }
+            $(imagen).addClass(claseObj);
+            $(imagen).attr("src",src);
+            if (claseObj == "cuerdas") {
+                 $('#contenedor').append(imagen);
+             } else {
+                 var enlace = $("<a>");
+                 ident = "img"+i;
+                 $(enlace).attr("id",ident);
+                 $(enlace).attr("href","www.mep.go.cr");
+                 $(enlace).html(imagen);
+                 $('#contenedor').append(enlace);
+                 animButton(enlace.children());
+             }
         } //end del for
     }); //fin del json
+
+    // bottom_anim(img);
+    $(".botones"  ).hover( function() {
+         bottom_anim(this,2);
+       }, function() {
+          bottom_anim(this,1);
+       }
+     );
+     // animButton(imagen);
 };
 
 function animButton(img) {
   var valorTop = "", valorDelay="";
   $(img).fadeToggle(1);
-     switch (img.id) {
+     switch ($(img).attr("id")) {
        case "btnImprimibles":
           valorTop = '+=48%';
           valorDelay = "1500";
@@ -71,7 +61,7 @@ function animButton(img) {
      }
      $(img).delay("slow").fadeToggle();
      $(img).animate({'top': valorTop},valorDelay, function() {
-         $(img).effect("bounce",{ direction:'down', times:2 }, 800);
+     $(img).effect("bounce",{ direction:'down', times:2 }, 800);
      });
 };
 
