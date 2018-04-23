@@ -14,6 +14,14 @@ body {
   width: 90%;
 }
 
+.fondoT {
+  position: absolute;
+  padding-top: 4%;
+  z-index: 0;
+  height: 75%;
+  width: 53%;
+  left: 19%;
+}
 .cuerdas {
     position: absolute;
     height: 77%;

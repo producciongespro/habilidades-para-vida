@@ -1,11 +1,8 @@
-var imagen = new Image();
+var imagen, imagenF;
 $( document ).ready(function() {
    menu();
-})
 
-// function menuCall() {
-//   menu();
-// }
+});
 
 function menu() {
     $.getJSON("data/data_carga_menu.json", function(result){
@@ -23,22 +20,19 @@ function menu() {
                  var enlace = $("<a>");
                  ident = "img"+i;
                  $(enlace).attr("id",ident);
-                 $(enlace).attr("href","www.mep.go.cr");
+                 $(enlace).attr("href",result[i].h_ref);
                  $(enlace).html(imagen);
                  $('#contenedor').append(enlace);
                  animButton(enlace.children());
              }
         } //end del for
     }); //fin del json
-
-    // bottom_anim(img);
-    $(".botones"  ).hover( function() {
-         bottom_anim(this,2);
-       }, function() {
-          bottom_anim(this,1);
-       }
-     );
-     // animButton(imagen);
+    imagenF = $('<img>');
+    srcF ="img/fondos/fondo-transparente.png";
+    $(imagenF).addClass("fondoT");
+    $(imagenF).attr("src",srcF);
+    $(imagenF).hide();
+    $('#contenedor').append(imagenF);
 };
 
 function animButton(img) {
@@ -61,13 +55,20 @@ function animButton(img) {
      }
      $(img).delay("slow").fadeToggle();
      $(img).animate({'top': valorTop},valorDelay, function() {
-     $(img).effect("bounce",{ direction:'down', times:2 }, 800);
+          $(img).effect("bounce",{ direction:'down', times:2 }, 800,function () {
+               console.log("entre");
+              $(imagenF).show("slow");
+          });
      });
+     $(img).hover( function() {
+              bottom_anim (this,2);
+            }, function() {
+              bottom_anim (this,1);
+            });
 };
 
 function bottom_anim (obj,ind) {
-  var nObj = obj.id;
-  console.log("En bottom animate"+obj.id);
+  var nObj = $(obj).attr("id");
   ruta = './img/botones/';
   switch (nObj) {
     case "btnManejo":

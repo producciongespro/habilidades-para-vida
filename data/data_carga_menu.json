@@ -9,24 +9,24 @@
     "id":"cuerdaDerecha",
     "clase":"cuerdas",
     "imagen":"./img/objetos/cuerda.png",
-    "id_link":""
+    "h_ref":""
   },
   {
     "id":"btnManejo",
     "clase":"botones",
     "imagen":"./img/botones/manejo_emociones0001.png",
-    "id_link":"linkMan"
+    "h_ref":"./sites/manejo.html"
   },
   {
     "id":"btnActividades",
     "clase":"botones",
     "imagen":"./img/botones/actividades0001.png",
-    "id_link":"linkAct"
+    "h_ref":"./sites/menu_actividades.html"
   },
   {
     "id":"btnImprimibles",
     "clase":"botones",
     "imagen":"./img/botones/imprimir0001.png",
-    "id_link":"linkImp"
+    "h_ref":"#"
   }
 ]
