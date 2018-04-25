@@ -47,12 +47,12 @@ function menu() {
              }
         } //end del for
     }); //fin del json
-    imagenF = $('<img>');
-    srcF ="img/fondos/fondo-transparente.png";
-    $(imagenF).addClass("fondoT");
-    $(imagenF).attr("src",srcF);
-    $(imagenF).hide();
-    $('#contenedor').append(imagenF);
+    // imagenF = $('<img>');
+    // srcF ="img/fondos/fondo-transparente.png";
+    // $(imagenF).addClass("fondoT");
+    // $(imagenF).attr("src",srcF);
+    // $(imagenF).hide();
+    // $('#contenedor').append(imagenF);
 
 
     function menuAnimButton(img) {
