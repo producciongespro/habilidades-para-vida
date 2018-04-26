@@ -52,13 +52,21 @@ function menu() {
             $(imagen).attr("id",result[i].id);
             $(imagen).addClass(claseObj);
             $(imagen).attr("src",src);
-            $('#contenedor').append(imagen);
-            if($(imagen).hasClass("botones"))
-             {
-                 menuAnimButton($(imagen));
-              }
-        } //end del for
+            if (claseObj == "cuerdas") {
+                 $('#contenedor').append(imagen);
+             } else {
+                 var enlace = $("<a>");
+                 ident = "img"+i;
+                 $(enlace).attr("id",ident);
+                 $(enlace).attr("href",result[i].h_ref);
+                 $(enlace).html(imagen);
+                 $('#contenedor').append(enlace);
+                 // $(enlace).on("click",callOption);
 
+                 })
+                 menuAnimButton(enlace.children());
+             }
+        } //end del for
     }); //fin del json
 
     function menuAnimButton(img) {
@@ -89,16 +97,10 @@ function menu() {
               });
          });
          $(img).hover( function() {
-                  // menuAnimHover (this,2);
-                   menuAnimHover (this,2);
+                  menuAnimHover (this,2);
                 }, function() {
                   menuAnimHover (this,1);
                 });
-          $(img).on( "click", callOption);
-          // function() {
-                // alert( $( this) );
-          // });
-
           }
 
     function menuAnimHover (obj,ind) {
@@ -117,14 +119,4 @@ function menu() {
         default:
       };
     };
-    function callOption(e) {
-      console.log(e.target.id);
-      // switch () {
-      //   case expression:
-      //
-      //     break;
-      //   default:
-
-      // }
-    }
 }

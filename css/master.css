@@ -1,43 +1,52 @@
 body {
-
+ background-color: black;
 }
 
-.container
+/* .container
 {
- background-color: black;
- height: auto;
+ height: 500px;
+} */
+
+/* #bgFondo {
+  padding-top: 1%;
+  z-index: 0;
+  height: 90%;
+  width: 90%;
+} */
+
+
+#contenedor img#bgFondo{
+ max-height: 500px;
+ height: 100%;
 }
 
 #bgFondo {
+  margin:0;
   padding-top: 1%;
-  z-index: 0;
-  height: auto;
-  max-height: 600px;
+  z-index: 0;;
   width: 100%;
-  /* max-width:840px;*/
 }
 
-/*.fondoT {
+.fondoT {
   position: absolute;
   padding-top: 4%;
-  z-index: 0;
-height: 75%;
+  height: 92%;
   width: 53%;
   left: 26%;
-} */
+}
 
 .backgLarge {
   position: absolute;
   padding-top: 4%;
   z-index: 0;
   height: 85%;
-  width: 80%;
+  width: 90%;
   left: 5%;
 }
 
 .cuerdas {
     position: absolute;
-    height: 77%;
+    height: 96%;
     padding-top: 3%;
     width: 1.75%;
 }
@@ -55,9 +64,14 @@ height: 75%;
   top: 5%;
   width: 47%;
   left:29%;
+  cursor: pointer;
+  cursor: hand;
 }
 
-
+.botones :hover{
+ cursor: pointer;
+ cursor: hand;
+}
 
  /* #btnManejo {
   top:15%;
