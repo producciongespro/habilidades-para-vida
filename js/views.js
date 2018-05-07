@@ -3,7 +3,7 @@
 function mainBackg() {
    var imagenBack  = $('<img>');
    srcF ="./img/fondos/fondo_amarillo.png";
-   $(imagenBack).addClass("img-fluid");
+   // $(imagenBack).addClass("img-fluid");
    $(imagenBack).attr("src",srcF);
    $(imagenBack).attr("id","bgFondo");
    $('#contenedor').append(imagenBack);

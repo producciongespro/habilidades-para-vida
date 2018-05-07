@@ -1,11 +1,7 @@
-body {
- background-color: black;
-}
-
-/* .container
+.container
 {
- height: 500px;
-} */
+/* background-color: #000000; */
+}
 
 /* #bgFondo {
   padding-top: 1%;
@@ -15,15 +11,15 @@ body {
 } */
 
 
-#contenedor img#bgFondo{
- max-height: 500px;
+/* #contenedor img#bgFondo{
+ /* max-height: 650px;
  height: 100%;
-}
+} */
 
 #bgFondo {
   margin:0;
   padding-top: 1%;
-  z-index: 0;;
+  z-index: -1;
   width: 100%;
 }
 
@@ -169,3 +165,29 @@ left: 75%;
 #imgEmociones01 {top: 3%;}
 #imgEmociones02 {top: 40%;}
 #imgEmociones03 {top: 80%;} */
+
+@media (min-height: 300px) {
+  #bgFondo {
+    max-height: 300px;
+  }
+}
+@media (min-height: 400px) {
+  #bgFondo {
+    max-height: 400px;
+  }
+}
+@media (min-height: 500px) {
+  #bgFondo {
+    max-height: 500px;
+  }
+}
+@media (min-height: 600px) {
+  #bgFondo {
+    max-height: 650px;
+  }
+}
+@media (min-height: 700px) {
+  #bgFondo {
+    max-height: 700px;
+  }
+}
