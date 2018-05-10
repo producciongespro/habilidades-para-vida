@@ -4,42 +4,44 @@
   height: 60%;
 } */
 
-#contenedor {
+/* #contenedor {
   width: 100%;
   height: auto;
-}
+} */
 
-/* .imgContainer */
+
 #contenedor
  {
     position: absolute;
     top: 0px; left: 0px;
-    width: 100%; height:100%;
+    width: 100%;
+    height:100%;
     background-image: url('../img/fondos/fondo_amarillo.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+
+
 #bgFondo {
   margin:0;
   padding-top: 1%;
   z-index: -1;
   width: 100%;
-  /* height: auto; */
 }
 
 .fondoT {
   position: absolute;
   top: 7%;
-  height: 82%;
+  height: 90%;
   width: 53%;
   left: 26%;
 }
 
 .backgLarge {
   position: absolute;
-  padding-top: 4%;
+  top: 5%;
   z-index: 0;
   height: 85%;
   width: 90%;
@@ -48,7 +50,7 @@
 
 .cuerdas {
     position: absolute;
-    height: 90%;
+    height: 95%;
     top: 3%;
     width: 1.75%;
 }
@@ -178,6 +180,7 @@ left: 75%;
     max-height: 300px;
   }
 }
+/*
 @media (min-height: 400px) {
   .container-fluid, .container-fluid img#bgFondo {
     max-height: 400px;
@@ -198,3 +201,16 @@ left: 75%;
     max-height: 700px;
   }
 } */
+@media screen and (max-width: 435px) and (orientation: portrait){
+  #contenedor
+   {
+      /* position: absolute;
+      top: 0px; left: 0px;
+      width: 100%; */
+      height: 50%;
+      /* background-image: url('../img/fondos/fondo_amarillo.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; */
+  }
+  }
