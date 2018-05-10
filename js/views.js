@@ -1,13 +1,13 @@
  var imagen, imagenF;
 
-function mainBackg() {
-   var imagenBack  = $('<img>');
-   srcF ="./img/fondos/fondo_amarillo.png";
-   // $(imagenBack).addClass("img-fluid");
-   $(imagenBack).attr("src",srcF);
-   $(imagenBack).attr("id","bgFondo");
-   $('#contenedor').append(imagenBack);
- }
+// function mainBackg() {
+//    var imagenBack  = $('<img>');
+//    srcF ="./img/fondos/fondo_amarillo.png";
+//    $(imagenBack).addClass("img-fluid");
+//    $(imagenBack).attr("src",srcF);
+//    $(imagenBack).attr("id","bgFondo");
+//    $('#contenedor').append(imagenBack);
+//  }
 
  function secundBackg(option) {
    imagenF = $('<img>');
@@ -41,7 +41,7 @@ function fileJson(opt) {
 
 function menu() {
     var fileJ = fileJson(1);
-     mainBackg()
+     // mainBackg()
      secundBackg("1");
     $.getJSON(fileJ, function(result){
         for (var i = 0; i < result.length; i++) {

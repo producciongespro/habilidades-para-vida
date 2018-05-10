@@ -1,32 +1,26 @@
-.container
-{
-/* background-color: #000000; */
+/* html { overflow-y:hidden; } */
+
+/* .container-fluid img#bgFondo{
+  height: 60%;
+} */
+
+#contenedor {
+  width: 100%;
+  height: auto;
 }
-
-/* #bgFondo {
-  padding-top: 1%;
-  z-index: 0;
-  height: 90%;
-  width: 90%;
-} */
-
-
-/* #contenedor img#bgFondo{
- /* max-height: 650px;
- height: 100%;
-} */
 
 #bgFondo {
   margin:0;
   padding-top: 1%;
   z-index: -1;
   width: 100%;
+  /* height: auto; */
 }
 
 .fondoT {
   position: absolute;
-  padding-top: 4%;
-  height: 92%;
+  top: 7%;
+  height: 82%;
   width: 53%;
   left: 26%;
 }
@@ -42,8 +36,8 @@
 
 .cuerdas {
     position: absolute;
-    height: 96%;
-    padding-top: 3%;
+    height: 90%;
+    top: 3%;
     width: 1.75%;
 }
 
@@ -62,6 +56,7 @@
   left:29%;
   cursor: pointer;
   cursor: hand;
+  height: auto;
 }
 
 .botones :hover{
@@ -166,28 +161,28 @@ left: 75%;
 #imgEmociones02 {top: 40%;}
 #imgEmociones03 {top: 80%;} */
 
-@media (min-height: 300px) {
-  #bgFondo {
+/* @media (min-height: 300px) {
+  .container-fluid, .container-fluid img#bgFondo {
     max-height: 300px;
   }
 }
 @media (min-height: 400px) {
-  #bgFondo {
+  .container-fluid, .container-fluid img#bgFondo {
     max-height: 400px;
   }
 }
 @media (min-height: 500px) {
-  #bgFondo {
+  .container-fluid, .container-fluid img#bgFondo {
     max-height: 500px;
   }
 }
 @media (min-height: 600px) {
-  #bgFondo {
+    .container-fluid, .container-fluid img#bgFondo {
     max-height: 650px;
   }
 }
 @media (min-height: 700px) {
-  #bgFondo {
+    .container-fluid, .container-fluid img#bgFondo {
     max-height: 700px;
   }
-}
+} */
