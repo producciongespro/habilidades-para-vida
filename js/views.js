@@ -1,14 +1,5 @@
  var imagen, imagenF;
 
-// function mainBackg() {
-//    var imagenBack  = $('<img>');
-//    srcF ="./img/fondos/fondo_amarillo.png";
-//    $(imagenBack).addClass("img-fluid");
-//    $(imagenBack).attr("src",srcF);
-//    $(imagenBack).attr("id","bgFondo");
-//    $('#contenedor').append(imagenBack);
-//  }
-
  function secundBackg(option) {
    imagenF = $('<img>');
    srcF ="img/fondos/fondo-transparente.png";
@@ -39,7 +30,7 @@ function fileJson(opt) {
 }
 
 
-function menu() {
+function menu(metodo) {
     var fileJ = fileJson(1);
      // mainBackg()
      secundBackg("1");
@@ -55,13 +46,13 @@ function menu() {
             $('#contenedor').append(imagen);
             if($(imagen).hasClass("botones"))
              {
-                 menuAnimButton($(imagen));
+                 menuAnimButton($(imagen), metodo);
               }
         } //end del for
 
     }); //fin del json
 
-    function menuAnimButton(img) {
+    function menuAnimButton(img, metodo) {
       var valorTop = "", valorDelay="", endAnim=false;
       $(img).fadeToggle(1);
          switch ($(img).attr("id")) {
@@ -84,7 +75,9 @@ function menu() {
          $(img).animate({'top': valorTop},valorDelay, function() {
               $(img).effect("bounce",{ direction:'down', times:2 }, 800,function () {
                 if (endAnim) {
-                  $(imagenF).show("slow")
+                  $(imagenF).show("slow");
+                  console.log("fin de la animacion");
+                  metodo();
               }
               });
          });
@@ -94,7 +87,7 @@ function menu() {
                 }, function() {
                   menuAnimHover (this,1);
                 });
-          $(img).on( "click", callOption);
+
           // function() {
                 // alert( $( this) );
           // });
@@ -117,14 +110,5 @@ function menu() {
         default:
       };
     };
-    function callOption(e) {
-      console.log(e.target.id);
-      // switch () {
-      //   case expression:
-      //
-      //     break;
-      //   default:
 
-      // }
-    }
 }
